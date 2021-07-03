@@ -9,6 +9,7 @@ import (
 
 func main() {
 	r := gin.Default()
+	service.DatabaseInit()
 	r.POST("/login", service.Login)
 	log.Fatal(r.Run(":3000"))
 }
